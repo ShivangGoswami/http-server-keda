@@ -6,10 +6,8 @@ spec:
   selector:
     matchLabels:
       app: http-server-keda
-  namespaceSelector:
-    matchNames:
-      - stress # change as per needs          
+  namespaceSelector: {}       
   endpoints:
-    - port: 8080
+    - scheme: http
       path: /metrics      
       interval: 5s
